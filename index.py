@@ -1,8 +1,7 @@
 """
-This file contains index operations.
-Run the following to check the available methods:
+Contains index operations. Check the available methods:
 
-.. code-block:: shellpython
+.. code-block:: shell
 
    python index.py --help
 
@@ -21,39 +20,68 @@ app = typer.Typer()
 
 @app.command("load-data")
 def load_data():
-    """Send multiple data to an OpenSearch client."""
+    """Send multiple data to an OpenSearch client.
+
+    .. code-block:: shell
+
+        python index.py load-data "recipes.json"
+
+    """
 
     def load_data():
         """Yields data from json file."""
-        # full_format_recipes.json source:
-        # https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json
-        with open("full_format_recipes.json", "r") as f:
+        with open("recipes.json", "r") as f:
             data = json.load(f)
             for recipe in data:
                 yield {"_index": INDEX_NAME, "_source": recipe}
+                output = (
+                    recipe["title"][:50] + "..."
+                    if len(recipe["title"]) > 50
+                    else recipe["title"] + "status: ok"
+                )
+                print(output)
 
     data = load_data()
     print(f"Ingesting {INDEX_NAME} data")
     response = helpers.bulk(client, data)
-    print(f"Data sent to your OpenSearch with response: {response}")
+    print(f"Data sent to your OpenSearch.")
 
 
 @app.command("delete-index")
 def delete_index(index_name=INDEX_NAME):
-    """Delete all the documents of certain index name, and do not raise exceptions"""
+    """Delete all the documents of certain index name,
+    and raise no exception.
+
+    .. code-block:: shell
+
+        python index.py delete-index INDEX_NAME
+    """
     client.indices.delete(index=index_name, ignore=[400, 404])
 
 
 @app.command("get-cluster-info")
 def get_cluster_info():
-    """Get information about your OpenSearch cluster"""
+    """Get information about your OpenSearch cluster
+
+    .. code-block:: shell
+
+        python index.py get-cluster-info
+
+    """
     return pprint(OpenSearch.info(client), width=100, indent=1)
 
 
 @app.command("get-mapping")
 def get_mapping():
     """Retrieve mapping for the index.
-    The mapping lists all the fields and their data types."""
+    The mapping lists all the fields and their data types.
+
+
+    .. code-block:: shell
+
+        python index.py get-mapping
+
+    """
 
     # list of all the cluster's indices
     indices = client.indices.get_alias("*").keys()
