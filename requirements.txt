@@ -1,4 +1,3 @@
 opensearch-py==2.0.0
 python-dotenv==0.20.0
-typer==0.4.1
-requests==2.27.1
+typer==0.4.2

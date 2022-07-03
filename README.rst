@@ -13,7 +13,7 @@ Repository structure
 
 Dataset
 -------
-You can download the dataset `from Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the ``full_format_recipes.json`` in the current folder of the `demo <https://github.com/aiven/demo-opensearch-python>`_.
+You can download the dataset `from Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the ``full_format_recipes.json`` in this current folder.
 
 Search examples
 ---------------
