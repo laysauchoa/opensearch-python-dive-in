@@ -33,9 +33,7 @@ OPTION can be:
 * `match-phrase <https://opensearch.org/docs/latest/opensearch/query-dsl/full-text/#match-phrase>`_
 * `fuzzy <https://opensearch.org/docs/latest/opensearch/query-dsl/full-text/#options>`_
 * `term <https://opensearch.org/docs/latest/opensearch/query-dsl/term/#term>`_
-* `slop <https://opensearch.org/docs/latest/opensearch/query-dsl/full-text/#options>`_
 * `range <https://opensearch.org/docs/latest/opensearch/query-dsl/term/#range>`_
-* `query-string <https://opensearch.org/docs/latest/opensearch/query-dsl/full-text/#query-string>`_
 * `combine <https://opensearch.org/docs/latest/opensearch/query-dsl/bool/>`_
 
 Quickstart
@@ -66,7 +64,7 @@ Replace your ``SERVICE_URI`` on `.env` file with yours as string::
 
 Do you have questions?
 ----------------------
-Feel free to open an issue with your question on `Issues` or drop me a message at laysa.uchoa@aiven.com
+Feel free to open an issue with your question on `Issues` or drop me a message at laysa.uchoa@gmail.com
 
 
 License

@@ -2,7 +2,7 @@
 This file contains code samples for search queries.
 Run the following to check the available methods:
 
-.. code-block:: shellpython
+.. code-block:: shell
 
    python search.py --help
 
@@ -14,6 +14,7 @@ from helpers import log_titles
 from typing import List
 
 app = typer.Typer()
+
 
 @app.command("match")
 def search_match(field: str, query: str, operator: str = "or") -> None:
@@ -34,10 +35,10 @@ def search_multi_match(fields: List[str], query: str) -> None:
 
 
 @app.command("match-phrase")
-def search_match_phrase(field, query):
+def search_match_phrase(field, query, slop=0):
     """Search by match phrase for specific phrases in a field."""
     typer.echo(f"Searching for {query} in the field {field}")
-    query_body = {"query": {"match_phrase": {field: {"query": query}}}}
+    query_body = {"query": {"match_phrase": {field: {"query": query, "slop": slop}}}}
     resp = client.search(index=INDEX_NAME, body=query_body)
     log_titles(resp)
 
@@ -67,33 +68,6 @@ def search_fuzzy(field, value, fuzziness) -> None:
             }
         }
     }
-    resp = client.search(index=INDEX_NAME, body=query_body)
-    log_titles(resp)
-
-
-@app.command("query-string")
-def search_query_string(field: str, query: str, size: int) -> None:
-    """Search by using operators with query string and size parameter"""
-    typer.echo(
-        f"Searching for {query} in the field {field} and returning maximum {size} results"
-    )
-    query_body = {
-        "query": {
-            "query_string": {
-                "query": "(new york city) OR (big apple)",
-                "default_field": "content",
-            }
-        }
-    }
-    resp = client.search(index=INDEX_NAME, body=query_body, size=size)
-    log_titles(resp)
-
-
-@app.command("slop")
-def search_slop(field, query, slop):
-    """Search by specifying a slop - a distance between search word"""
-    typer.echo(f"Searching for {query} with slop value {slop} in the field {field}")
-    query_body = {"query": {"match_phrase": {field: {"query": query, "slop": slop}}}}
     resp = client.search(index=INDEX_NAME, body=query_body)
     log_titles(resp)
 

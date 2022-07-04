@@ -7,6 +7,7 @@ Contains index operations. Check the available methods:
 
 """
 import json
+from logging import exception
 from pprint import pprint
 
 import typer
@@ -32,14 +33,9 @@ def load_data():
         """Yields data from json file."""
         with open("recipes.json", "r") as f:
             data = json.load(f)
+            print("Data is being ingested...")
             for recipe in data:
                 yield {"_index": INDEX_NAME, "_source": recipe}
-                output = (
-                    recipe["title"][:50] + "..."
-                    if len(recipe["title"]) > 50
-                    else recipe["title"] + "status: ok"
-                )
-                print(output)
 
     data = load_data()
     print(f"Ingesting {INDEX_NAME} data")
