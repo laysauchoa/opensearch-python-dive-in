@@ -13,11 +13,11 @@ Repository structure
 
 Dataset
 -------
-You can download the dataset `from Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the file as ``recipes.json`` in this current folder.
+You can download the `Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the file as ``recipes.json`` in this current folder.
 
 Search examples
 ---------------
-The available search options can be found by using help command::
+The available search options can be found by using the `--help` command::
 
     python search.py --help
 
@@ -40,8 +40,11 @@ Quickstart
 -----------
 
 To run those examples you need:
-* `Python 3.7+ <https://www.python.org/downloads/>`_.
-* An OpenSearch® cluster. It can be `set it up manually <https://opensearch.org/downloads.html>`_ or you can use a fully managed service, such as `Aiven for OpenSearch® <https://aiven.io/opensearch>`_.
+
+* `Python 3.7+ <https://www.python.org/downloads/>`_
+
+* An OpenSearch® cluster. It can be `set it up manually <https://opensearch.org/downloads.html>`_ or you can use a fully managed service, such as `Aiven for OpenSearch® <https://aiven.io/opensearch>`_
+
 * OpenSearch cluster `Service URI`
 
 Dependencies
