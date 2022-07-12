@@ -14,18 +14,39 @@ from config import INDEX_NAME, SERVICE_URI, client
 from helpers import log_titles
 from typing import List
 
-app = typer.Typer()
+app = typer.Typer(rich_markup_mode="rich")
 console = Console()
 
 
 @app.command("match")
-def search_match(field: str, query: str, operator: str = "or") -> None:
-    """Perform search by relevance for certain field and query."""
+def search_match(
+    field: str, query: str, operator: str = "or", fuzziness: str = "0"
+) -> None:
+    """Perform search by relevance for certain field and query.
+
+    {
+        "query":{
+            "match":{
+            "field":{
+                "query":query,
+                "operator":operator,
+                "fuzziness":fuzziness }
+            }
+        }
+    }
+    """
     typer.echo(f"Searching for {query} in the field {field} \n")
-    query_body = {"query": {"match": {field: {"query": query, "operator": operator}}}}
+    query_body = {
+        "query": {
+            "match": {
+                field: {"query": query, "operator": operator, "fuzziness": fuzziness}
+            }
+        }
+    }
+
     resp = client.search(index=INDEX_NAME, body=query_body)
-    console.rule("[bold red]Match Query")
-    log_titles(resp)
+    console.rule("[bold bright_magenta]Match Query", style="#70cdc6")
+    log_titles(query, resp)
 
 
 @app.command("multi-match")
