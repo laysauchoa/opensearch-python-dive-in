@@ -9,6 +9,7 @@ Contains index operations. Check the available methods:
 import json
 from logging import exception
 from pprint import pprint
+from rich import print as rprint
 
 import typer
 from opensearchpy import helpers, OpenSearch
@@ -83,17 +84,15 @@ def get_mapping():
     indices = client.indices.get_alias("*").keys()
 
     # Example:
-    # dict_keys(['.kibana_1', 'epicurious-recipes'])
-
+    # dict_keys(['.kibana_1', 'recipes'])
     mapping_data = client.indices.get_mapping(INDEX_NAME)
 
     # Find index doc_type
     doc_type = list(mapping_data[INDEX_NAME]["mappings"].keys())[0]
 
     schema = mapping_data[INDEX_NAME]["mappings"][doc_type]
-    pprint(list(schema.keys()))
-    print("\n")
-    pprint(schema, width=80, indent=0)
+    # rprint(list(schema.keys()))
+    rprint(schema)
 
 
 if __name__ == "__main__":
