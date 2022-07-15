@@ -30,7 +30,8 @@ def search_match(
             "field":{
                 "query":query,
                 "operator":operator,
-                "fuzziness":fuzziness }
+                "fuzziness":fuzziness
+                }
             }
         }
     }
@@ -46,12 +47,12 @@ def search_match(
 
     resp = client.search(index=INDEX_NAME, body=query_body)
     console.rule("[bold bright_magenta]Match Query", style="#70cdc6")
-    log_titles(query, resp)
+    log_titles(resp)
 
 
 @app.command("multi-match")
 def search_multi_match(fields: List[str], query: str) -> None:
-    """Perform search by relevance for certain field and query."""
+    """Perform search by relevance for a query through different fields."""
     typer.echo(f"Searching for {query} in the field {fields} \n")
     query_body = {"query": {"multi_match": {"query": query, "fields": fields}}}
     resp = client.search(index=INDEX_NAME, body=query_body)
@@ -74,11 +75,12 @@ def search_range(field: str, gte, lte) -> None:
     typer.echo(f"Searching for values in the {field} ranging from {gte} to {lte} \n")
     query_body = {"query": {"range": {field: {"gte": gte, "lte": lte}}}}
     resp = client.search(index=INDEX_NAME, body=query_body)
+    console.rule("[bold red]Range Query")
     log_titles(resp)
 
 
 @app.command("fuzzy")
-def search_fuzzy(field, value, fuzziness) -> None:
+def search_fuzzy(field, value, fuzziness=0) -> None:
     """Search by specifying fuzziness to account for typos and misspelling."""
     typer.echo(
         f"Search for {value} in the {field} with fuzziness set to {fuzziness} \n"
@@ -113,6 +115,7 @@ def search_combined_queries():
             }
         }
     }
+    console.rule("[bold red]Combined Query")
     resp = client.search(index=INDEX_NAME, body=query_body)
     log_titles(resp)
 
@@ -122,6 +125,7 @@ def search_term(field: str, value: int):
     """Searching for exact matches of a value in a field."""
     typer.echo(f"Searching for exact value {value} in the field {field}")
     query_body = {"query": {"term": {field: value}}}
+    console.rule("[bold red]Term Query")
     resp = client.search(index=INDEX_NAME, body=query_body)
     log_titles(resp)
 
