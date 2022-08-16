@@ -1,3 +1,6 @@
+.. image:: /images/opensearch-python.png
+  :alt: OpenSearch Python dive in
+
 OpenSearch® search queries with Python
 ======================================
 
