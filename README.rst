@@ -18,8 +18,8 @@ Dataset
 -------
 You can download the `Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the file as ``recipes.json`` in this current folder.
 
-OpenSearch® search queries with Python
----------------------------------------
+Search queries
+---------------
 
 The available search options can be found by using the `--help` command::
 
@@ -39,6 +39,31 @@ OPTION can be:
 * `term <https://opensearch.org/docs/latest/opensearch/query-dsl/term/#term>`_
 * `range <https://opensearch.org/docs/latest/opensearch/query-dsl/term/#range>`_
 * `combine <https://opensearch.org/docs/latest/opensearch/query-dsl/bool/>`_
+
+
+Test an analyzer 
+----------------
+
+OpenSearch comes with a set of built-in analyzers:
+
+- standard
+- simple
+- whitespace
+- stop
+- keyword
+- pattern
+- fingerprint
+- languages
+
+You can use ``analyzer.py`` to test how an analyzer works. As a result, you will be able to see which tokens it generates.
+
+The available analyzer options can be found by using the `--help` command::
+
+    python analyzer.py --help
+
+Find the arguments to be passed to a certain function by running::
+
+    python analyzer.py OPTION --help
 
 Quickstart
 -----------
