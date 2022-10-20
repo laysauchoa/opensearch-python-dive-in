@@ -1,8 +1,8 @@
 .. image:: /images/opensearch-python.png
   :alt: OpenSearch Python dive in
 
-OpenSearch® search queries with Python
-======================================
+OpenSearch® with Python
+========================
 
 This repository contains code examples related to `OpenSearch with Python queries <https://developer.aiven.io/docs/products/opensearch/howto/opensearch-search-and-python.html>`_.
 
@@ -18,8 +18,9 @@ Dataset
 -------
 You can download the `Kaggle recipe dataset <https://www.kaggle.com/hugodarwood/epirecipes?select=full_format_recipes.json>`_, and save the file as ``recipes.json`` in this current folder.
 
-Search examples
----------------
+OpenSearch® search queries with Python
+---------------------------------------
+
 The available search options can be found by using the `--help` command::
 
     python search.py --help

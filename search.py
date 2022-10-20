@@ -10,7 +10,7 @@ Run the following to check the available methods:
 import typer
 from rich.console import Console
 
-from config import INDEX_NAME, SERVICE_URI, client
+from config import INDEX_NAME, client
 from helpers import log_titles
 from typing import List
 
