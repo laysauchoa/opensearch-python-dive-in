@@ -105,6 +105,7 @@ Install all dependencies::
 
 Service URI
 '''''''''''
+
 To connect with your cluster, you need the **Service URI** of your OpenSearch cluster. You can find the connection details in the section **Overview** on `Aiven web console <https://console.aiven.io>`_. Notice that ``service_uri`` contains credentials; therefore, should be treated with care. 
 
 This project uses ``dotenv`` `Python library <https://pypi.org/project/python-dotenv/>`_ to manage the environment variables.
@@ -114,18 +115,13 @@ Replace your ``SERVICE_URI`` on `.env` file with yours as string::
     SERVICE_URI=<https://<user>:<password>@<host>:<port>
 
 
-Do you have questions?
-----------------------
-Feel free to open an issue with your question on `Issues` or drop me a message at laysa.uchoa@gmail.com
-
-
 License
 -------
 
 |License: CC BY 4.0|
 
-I created this repository to make OpenSearch easy to use for Python developers.
-You can use this work by following the CC-BY license. Please attribute it by mentioning “OpenSearch and Python by @laysauchoa”.
+I created this repository to make OpenSearch® easy to use for Python developers.
+You can use this work by following the CC-BY license. Please attribute it by mentioning “OpenSearch® and Python by @laysauchoa”.
 
 This work is licensed under a `Creative Commons Attribution 4.0
 International License <https://creativecommons.org/licenses/by/4.0/>`__.
@@ -136,4 +132,8 @@ International License <https://creativecommons.org/licenses/by/4.0/>`__.
 Trademarks
 ----------
 
-OpenSearch, Python are trademarks and property of their respective owners. All product and service names used in this website are for identification purposes only and do not imply endorsement.
+OpenSearch® and Python are trademarks and property of their respective owners. All product and service names used in this website are for identification purposes only and do not imply endorsement.
+
+Do you have questions?
+----------------------
+Feel free to open an issue with your question on `Issues` or drop me a message at ``laysa.uchoa@gmail.com``.
