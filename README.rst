@@ -1,5 +1,12 @@
-.. image:: /images/opensearch-python.png
-  :alt: OpenSearch Python dive in
+ .. raw:: html
+
+   <p align="center">
+      <a href="https://aiven.io/blog/opensearch-dinner-party">
+         <img src="https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/images/opensearch-python.png" width="60%" alt="OpenSearch Python dive in" />
+      </a>
+   </p>
+   <p align="center">
+   </p>
 
 OpenSearch® with Python
 ========================
@@ -15,7 +22,7 @@ To run those examples you need:
 
 * An OpenSearch® cluster. It can be `set it up manually <https://opensearch.org/downloads.html>`_ or you can use a fully managed service, such as `Aiven for OpenSearch® <https://aiven.io/opensearch>`_
 
-* OpenSearch cluster `Service URI`
+* OpenSearch® cluster `Service URI`
   
 Repository structure
 --------------------
@@ -137,3 +144,10 @@ OpenSearch® and Python are trademarks and property of their respective owners. 
 Do you have questions?
 ----------------------
 Feel free to open an issue with your question on `Issues` or drop me a message at ``laysa.uchoa@gmail.com``.
+
+
+More OpenSearch® resources
+--------------------------
+
+- `Migrate from Elasticsearch to OpenSearch client <https://aiven.io/blog/migrate-elasticsearch-client-to-opensearch>`_.
+- `Write search queries with OpenSearch and Python <https://aiven.io/blog/opensearch-dinner-party>`_.
