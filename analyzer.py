@@ -48,7 +48,7 @@ def test_analyzer(
 def test_analyzers(text: str):
     """Check how your input is tokenized with all OpenSearch built-in analyzers"""
     console.rule("[bold red]OpenSearch® Built-in Analyzers")
-    table = Table(title="OpenSearch® Built-in Analyzers")
+    table = Table()
 
     table.add_column("Analyzer", justify="right", style="cyan", no_wrap=True)
     table.add_column("Tokens", style="magenta")
