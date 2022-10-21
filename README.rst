@@ -6,6 +6,17 @@ OpenSearch® with Python
 
 This repository contains code examples related to `OpenSearch with Python queries <https://developer.aiven.io/docs/products/opensearch/howto/opensearch-search-and-python.html>`_.
 
+Quickstart
+-----------
+
+To run those examples you need:
+
+* `Python 3.7+ <https://www.python.org/downloads/>`_
+
+* An OpenSearch® cluster. It can be `set it up manually <https://opensearch.org/downloads.html>`_ or you can use a fully managed service, such as `Aiven for OpenSearch® <https://aiven.io/opensearch>`_
+
+* OpenSearch cluster `Service URI`
+  
 Repository structure
 --------------------
 This repository contains the following:
@@ -85,17 +96,6 @@ Find the arguments to be passed to a certain function by running::
 
     python analyzer.py OPTION --help
 
-Quickstart
------------
-
-To run those examples you need:
-
-* `Python 3.7+ <https://www.python.org/downloads/>`_
-
-* An OpenSearch® cluster. It can be `set it up manually <https://opensearch.org/downloads.html>`_ or you can use a fully managed service, such as `Aiven for OpenSearch® <https://aiven.io/opensearch>`_
-
-* OpenSearch cluster `Service URI`
-
 Dependencies
 ''''''''''''
 
@@ -122,8 +122,16 @@ Feel free to open an issue with your question on `Issues` or drop me a message a
 License
 -------
 
-This work is licensed under the Apache License, Version 2.0. Full license text is available in the LICENSE file and at http://www.apache.org/licenses/LICENSE-2.0.txt
+|License: CC BY 4.0|
 
+I created this repository to make OpenSearch easy to use for Python developers.
+You can use this work by following the CC-BY license. Please attribute it by mentioning “OpenSearch and Python by @laysauchoa”.
+
+This work is licensed under a `Creative Commons Attribution 4.0
+International License <https://creativecommons.org/licenses/by/4.0/>`__.
+
+.. |License: CC BY 4.0| image:: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+   :target: https://creativecommons.org/licenses/by/4.0/deed.de
 
 Trademarks
 ----------
