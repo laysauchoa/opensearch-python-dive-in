@@ -10,24 +10,23 @@ Repository structure
 --------------------
 This repository contains the following:
 
-```
+..  code-block::
 
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.rst
-├── LICENSE
-├── README.rst
-├── __init__.py
-├── analyzer.py
-├── config.py
-├── helpers.py
-├── images
-│   └── opensearch-python.png
-├── index.py
-├── recipes.json
-├── requirements.txt
-└── search.py
+    ├── CODE_OF_CONDUCT.md
+    ├── CONTRIBUTING.rst
+    ├── LICENSE
+    ├── README.rst
+    ├── __init__.py
+    ├── analyzer.py
+    ├── config.py
+    ├── helpers.py
+    ├── images
+    │   └── opensearch-python.png
+    ├── index.py
+    ├── recipes.json
+    ├── requirements.txt
+    └── search.py 
 
-```
 
 * `config.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/config.py>`_, basic information to connect to the cluster
 * `index.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/index.py>`_, contains methods that manipulate the index
