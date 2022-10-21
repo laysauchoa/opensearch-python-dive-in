@@ -11,6 +11,7 @@ Repository structure
 This repository contains the following:
 
 ```
+
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.rst
 ├── LICENSE
@@ -25,12 +26,14 @@ This repository contains the following:
 ├── recipes.json
 ├── requirements.txt
 └── search.py
+
 ```
 
-* `config.py <https://github.com/aiven/demo-opensearch-python/blob/main/config.py>`_, basic information to connect to the cluster
-* `index.py <https://github.com/aiven/demo-opensearch-python/blob/main/index.py>`_, contains methods that manipulate the index
-* `search.py <https://github.com/aiven/demo-opensearch-python/blob/main/search.py>`_, contains search queries methods
-* `helpers.py <https://github.com/aiven/demo-opensearch-python/blob/main/helpers.py>`_, response handler of search requests
+* `config.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/config.py>`_, basic information to connect to the cluster
+* `index.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/index.py>`_, contains methods that manipulate the index
+* `search.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/search.py>`_, contains search queries methods
+* `helpers.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/helpers.py>`_, response handler of search requests
+* `analyzer.py <https://github.com/laysauchoa/opensearch-python-dive-in/blob/main/analyzer.py>`_, test built-in analyzers with user input
 
 Dataset
 -------
