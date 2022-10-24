@@ -1,5 +1,5 @@
 name: 🐛 Bug
-description: Use this template to report an bug/error to help improve the project.
+description: Use this template to report an bug/error to help improve the project
 title: '[BUG] <description>'
 labels: ['bug']
 body:
