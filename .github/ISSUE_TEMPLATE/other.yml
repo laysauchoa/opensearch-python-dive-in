@@ -10,7 +10,7 @@ body:
     id: issuedescription
     attributes:
       label: What would you like to share?
-      description: Provide a clear and concise explanation of your issue.
+      description: Provide a clear and concise explanation of your issue
     validations:
       required: true
   - type: textarea
