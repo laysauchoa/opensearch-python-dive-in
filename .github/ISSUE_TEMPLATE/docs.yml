@@ -1,5 +1,5 @@
 name: 📄 Documentation
-description: Found an issue in the documentation? You can use this one!
+description: Use this template for documentation changes
 title: '[DOCS] <description>'
 labels: ['documentation']
 body:
