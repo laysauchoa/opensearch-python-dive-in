@@ -1,0 +1,12 @@
+name: 📄 Documentation
+description: Use this template for documentation changes
+title: '[DOCS] <description>'
+labels: ['documentation']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the documentation change
+    validations:
+      required: true

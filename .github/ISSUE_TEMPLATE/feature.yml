@@ -1,0 +1,26 @@
+name: 💡 General Feature Request
+description: Use this template for requesting new features or enhancements
+title: '[FEATURE] <description>'
+labels: ['feature']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the feature request
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description:  What would be one or more things that this feature would require to work? Don't worry if you don't know. A maintainer can fill in the information or re-file the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
