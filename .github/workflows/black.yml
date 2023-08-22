@@ -1,9 +1,19 @@
 name: Lint
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - closed
 
 jobs:
   lint:
+    if: ${{ github.event_name == 'push' || github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
