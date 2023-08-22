@@ -16,7 +16,7 @@ This repository contains code examples related to `OpenSearch with Python querie
 Quickstart
 -----------
 
-To run those examples you need:
+To run those examples, you need:
 
 * `Python 3.7+ <https://www.python.org/downloads/>`_
 
